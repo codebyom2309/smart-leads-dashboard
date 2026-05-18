@@ -130,7 +130,7 @@ export const LoginPage = (): JSX.Element => {
         {/* Demo credentials */}
         <div className="mt-4 p-3 bg-primary-50 dark:bg-primary-900/20 rounded-xl text-center">
           <p className="text-xs text-primary-700 dark:text-primary-300 font-mono">
-            Demo: admin@smartleads.io / Password1
+            Demo: admin@smartleads.io / Password123
           </p>
         </div>
       </motion.div>
