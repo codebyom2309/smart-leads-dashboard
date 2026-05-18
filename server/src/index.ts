@@ -73,13 +73,10 @@ app.get('/api/seed', async (req: Request, res: Response) => {
     await Lead.deleteMany({});
 
     // Create users
-    const adminPassword = await bcrypt.hash('Password123', 12);
-    const salesPassword = await bcrypt.hash('Password123', 12);
-
     const admin = await User.create({
       name: 'Admin User',
       email: 'admin@smartleads.io',
-      password: adminPassword,
+      password: 'Password123',
       role: 'admin',
       isActive: true,
     });
@@ -87,7 +84,7 @@ app.get('/api/seed', async (req: Request, res: Response) => {
     await User.create({
       name: 'Sales User',
       email: 'sales@smartleads.io',
-      password: salesPassword,
+      password: 'Password123',
       role: 'sales',
       isActive: true,
     });
