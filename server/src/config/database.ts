@@ -10,6 +10,7 @@ export const connectDatabase = async (): Promise<void> => {
     const conn = await mongoose.connect(config.mongoUri, {
       serverSelectionTimeoutMS: 5000,
       socketTimeoutMS: 45000,
+      family: 4,
     });
 
     isConnected = true;
